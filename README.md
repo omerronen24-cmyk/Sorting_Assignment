@@ -8,7 +8,7 @@
 |-------------|----------|
 | `run_experiments.py` | Sorts, timing, CLI (`-a`, `-s`, `-e`, `-r`), plots |
 | `result1.png` | Part B — random arrays |
-| `result2.png` | Part C — nearly sorted, 5% vs 20% swap noise |
+|  | Part C — nearly sorted, 5% vs 20% swap noise |
 | `requirements.txt` | `matplotlib` |
 
 **Run:** `pip install -r requirements.txt`  
@@ -34,6 +34,6 @@ Insertion Sort curves upward much faster than Merge and Quick, matching **O(n²)
 
 ## Part C — `result2.png` (nearly sorted + noise)
 
-![result2](result2.png)
+
 
 Compared to Part B, **Insertion Sort is much faster** when the array is almost sorted: few inversions mean cheap inner-loop work, especially at **5%** noise; at **20%** noise it slows as more elements are far from place. **Merge** and **Quick** stay similar to Part B (order affects them little with this setup); their 5% vs 20% lines overlap. **Why:** insertion benefits from locality of order; divide-and-conquer routines still scan/partition the whole structure each level.
